@@ -1,0 +1,5 @@
+# Project exclude paths
+/datahub-common/target/
+/datahub-persistence/target/
+/datahub-service/target/
+/datahub-web/target/

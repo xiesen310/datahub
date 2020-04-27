@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.0.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.github</groupId>
+    <artifactId>datahub</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <description>数据服务总线</description>
+
+    <modules>
+        <module>datahub-persistence</module>
+        <module>datahub-service</module>
+        <module>datahub-web</module>
+        <module>datahub-common</module>
+    </modules>
+
+    <name>datahub</name>
+    <url>https://github.com/xiesen310</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
+        <swagger2.version>2.8.0</swagger2.version>
+        <jackson.version>2.9.9</jackson.version>
+        <hutool.version>5.0.6</hutool.version>
+        <kafka.version>1.1.1</kafka.version>
+        <pagehelper.version>1.2.13</pagehelper.version>
+        <fastjson.version>1.2.62</fastjson.version>
+        <java-jwt.version>3.2.0</java-jwt.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
+        <slf4j-api.version>1.7.25</slf4j-api.version>
+        <dom4j.version>1.6.1</dom4j.version>
+        <pinyin4j.version>2.5.0</pinyin4j.version>
+        <mybatisplus.version>3.3.0</mybatisplus.version>
+        <shiro-spring.version>1.4.0</shiro-spring.version>
+        <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
+        <druid-version>1.1.5</druid-version>
+        <guava.version>18.0</guava.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>ali-snapshots</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>spring-snapshots</id>
+            <url>http://repo.spring.io/libs-snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>ali-snapshots</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <url>http://repo.spring.io/libs-snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <!--指定资源的位置-->
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+</project>
